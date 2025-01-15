@@ -17,8 +17,6 @@ class BankAccount:
     def display_balance(self):
         print(f"Current balance: ${self.account_balance:.2f}")
 
-# main-0.py
-
 import sys
 from bank_account import BankAccount
 
