@@ -2,27 +2,24 @@
 
 class BankAccount:
     def __init__(self, initial_balance=0):
-        self._account_balance = initial_balance  # Encapsulated attribute
+        self.account_balance = initial_balance
 
     def deposit(self, amount):
-        if amount > 0:
-            self._account_balance += amount
-            print(f"Deposited: ${amount:.2f}")
-        else:
-            print("Deposit amount must be positive.")
+        self.account_balance += amount
 
     def withdraw(self, amount):
-        if 0 < amount <= self._account_balance:
-            self._account_balance -= amount
-            print(f"Withdrew: ${amount:.2f}")
+        if amount <= self.account_balance:
+            self.account_balance -= amount
             return True
         else:
-            print("Insufficient funds or invalid withdrawal amount.")
             return False
 
     def display_balance(self):
-        print(f"Current balance: ${self._account_balance:.2f}")
-        import sys
+        print(f"Current balance: ${self.account_balance:.2f}")
+
+# main-0.py
+
+import sys
 from bank_account import BankAccount
 
 def main():
@@ -50,5 +47,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-        
