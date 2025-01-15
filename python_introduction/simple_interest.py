@@ -5,4 +5,4 @@ time = 3
 # Calculate the simple interest using the formula I = P * R * T
 I = P * R * T
 # Print the calculated interest in the specified format
-print("The simple interest is:", I)
+print("The simple interest is:", interest)
